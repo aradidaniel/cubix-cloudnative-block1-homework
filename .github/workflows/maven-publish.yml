@@ -28,7 +28,7 @@ jobs:
       run: java -version
 
     - name: Build with Maven
-      run: ./mvnwpackage
+      run: ./mvnw package
       
 
     
