@@ -1,8 +1,8 @@
 #!/bin/sh
 
 docker run -d --name test -p 8080:8080 ghcr.io/aradidaniel/cubix/1/homework/app:springboot > /dev/null
-sleep 30
-curl --fail http://localhost:8080/cubix/test
+sleep 20
+curl --fail http://localhost:8080/application/test
 RESULT=$?
 if [ $RESULT -ne 0 ]; then
   echo "Verification failed, here are the logs"
