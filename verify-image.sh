@@ -1,7 +1,7 @@
 #!/bin/sh
 
 docker run -d --name test -p 8080:8080 ghcr.io/aradidaniel/cubix/1/homework/app:springboot > /dev/null
-sleep 60
+sleep 30
 curl --fail http://localhost:8080/cubix/test
 RESULT=$?
 if [ $RESULT -ne 0 ]; then
