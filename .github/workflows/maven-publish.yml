@@ -35,7 +35,7 @@ jobs:
     - name: Upload artifact for Docker job
       uses: actions/upload-artifact@v3
       with:
-        name: ghcr.io/aradidaniel/cubix/1/homework/app:springboot
+        name: java-app
         path: '${{ github.workspace }}/target/*.jar' 
 
   docker:
@@ -52,7 +52,7 @@ jobs:
     - name: Download artifact from maven job
       uses: actions/download-artifact@v3
       with:
-        name: ghcr.io/aradidaniel/cubix/1/homework/app:springboot
+        name: java-app
 
     - name: Logging in to Docker
       run: docker login ghcr.io -u aradidaniel -p ${{ github.token }} 
