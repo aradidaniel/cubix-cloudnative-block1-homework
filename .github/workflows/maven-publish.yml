@@ -62,3 +62,8 @@ jobs:
     
     - name: Publishing the Docker image
       run: docker push ghcr.io/aradidaniel/cubix/1/homework/app:springboot
+    
+    - name: Verifying the Docker image
+      run: verify-image.sh
+
+      
